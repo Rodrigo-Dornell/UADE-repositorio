@@ -1,53 +1,103 @@
-:root {
-    --primer-color: #e46f0a;
-    --segundo-color: #9e3f00;
-    --border-radius: 8px;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200&family=Open+Sans:wght@300&display=swap'); /*FUENTE USADA SACADA DE GOOGLE FONTS*/
+:root { /*PARA EL USO DE LOS COLORES A PARTIR DE: (VAR)*/
+    --primercolor: #e46f0a;
+    --segundocolor: #9e3f00;
+    --tercercolor: #F5DEB3;
+    --cuartocolor: #ffffff;
+    --quintocolor: #333333;
+    --sextocolor:background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);     /*Lo saque de https://cssgradient.io/gradient-backgrounds/(recordatorio)*/
+    /**/
 }
 * {
     margin: 0;
     box-sizing: border-box;
 }
-
-.encabezado {
+body{
+    font-family: 'Inter', sans-serif; /*FUENTE DEL CODIGO*/
+}
+.encabezado { 
     display: flex;
-    justify-content: space-between;
-    background-color: var(--primer-color);
+    justify-content: space-between; /*DISTRIBUYE EL ESPACIO ENTRE Y AL REDEDOR DE LOS ITEMS FLEX*/
+    background-color: var(--primercolor); /*USO DE VAR*/
     align-items: center;
     padding: 5px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 80px;
+    position: fixed; /*PARA QUE SI HAY QUE HACER UN SCROLL NO DESAPAREZCA EL ENCABEZADO*/
+    width: 100%; /*PARA QUE OCUPE TODO EL ANCHO*/
+    top: 0; /*PARA QUE QUEDE FIJO ARRIBA*/
+    left: 0; /*PARA QUE QUEDE FIJO ARRIBA A LA IZQUIERDA*/
+    height: 80px; /*ALTURA FIJA PARA EL ENCABEZADO SIN IMPORTAR SU CONTENIDO*/
 }
 .nav-link {
-    padding: 5px;
-    font-size: 16px;
-    width: max-content;
-    margin: 0 10px;
-    text-transform: uppercase;
+    padding: 5px;/*AREA DE RELLENO ALREDEDOR DEL CONTENIDO*/
+    font-size: 16px; /*TAMAÑO DE LA FUENTE*/
+    width: max-content; /*ANCHO MAXIMO DE QUE PUEDE TENER EL ELEMENTO*/
+    margin: 0 10px; /*ESTABLECE EL MARGEN 0 EN "Y", 20PX EN "X"*/
+    text-transform: uppercase; /*CAMBIA DE MINUSCULAS A MAYUSCULAS*/
 }
 
 .nav-item {
     padding: 3px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #ffffff;
+    border-radius: 8px; /*REDONDEADO DE LOS BORDES*/
+    text-decoration: none; /*PARA SACAR EL SUBRAYADO DEL TEXTO*/
+    color: var(--cuartocolor);
 }
 
 .nav-item:hover {
-    background-color: var(--segundo-color);
-    transition: 1s;
+    background-color: var(--segundocolor);
+    transition: 1s; /*LITERALMENTE TRANSICION*/
 }
 
 .head img {
     height: 50px;   
     padding: 0 40px;
-    line-height: 80px;
 }
-.collapse navbar-collapse {
-    border-radius: 20px;
+main{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    height: 100%;
 }
-.navbar-collapse {
-    border-radius: 2px;
+.container{
+    font-family: 'Open Sans', sans-serif;
+}
+.footer {
+    padding: 5px;
+    width: 100%;
+    height: 80px;
+    background-color: var(--quintocolor);
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+}
+.foot{
+    display: flex;  /*PERMITE ALINEAR LOS ELEMENTOS SECUNDARIOS DE UN CONTENEDOR EN UNA FILA*/
+    justify-content: space-between;
+    align-items: center;
+}
+.bott img{
+    height: 50px;   
+    padding: 0 40px;
+    margin: 8px auto;
+}
+.redsocial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.redsocial a {
+    color: var(--tercercolor);
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.redsocial a:hover {
+    background-color:var(--segundocolor);
+    transition: 1s;
+    color: var(--cuartocolor);
+    text-decoration: none;
 }
