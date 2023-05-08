@@ -26,8 +26,6 @@ body{
     position: fixed; /*PARA QUE SI HAY QUE HACER UN SCROLL NO DESAPAREZCA EL ENCABEZADO*/
     width: 100%; /*PARA QUE OCUPE TODO EL ANCHO*/
     top: 0; /*PARA QUE QUEDE FIJO ARRIBA*/
-    left: 0; /*PARA QUE QUEDE FIJO ARRIBA A LA IZQUIERDA*/
-    height: 8%; /*ALTURA FIJA PARA EL ENCABEZADO SIN IMPORTAR SU CONTENIDO*/
 }
 .nav-link {
     padding: 5px;/*AREA DE RELLENO ALREDEDOR DEL CONTENIDO*/
@@ -68,8 +66,7 @@ main{
     height: 80px;
     background-color: var(--quintocolor);
     position: fixed; 
-    bottom: 0;
-    left: 0;
+    bottom: 0; /*PARA QUE QUEDE FIJO ABAJO*/
 }
 .foot{
     display: flex;  /*PERMITE ALINEAR LOS ELEMENTOS SECUNDARIOS DE UN CONTENEDOR EN UNA FILA*/
@@ -103,3 +100,8 @@ main{
     color: var(--cuartocolor);
     text-decoration: none;
 }
+.carousel-item img { /*PARA CENTRAR LA IMAGEN DEL CARROUSEL*/
+    display: block;
+    margin: auto;
+}
+
